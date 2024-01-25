@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello LivreController!{% endblock %}
+
+{% block body %}
+
+    {% block content %}
+        <div class="container">
+            {% for livres in livre %}
+                <p> <a href="{{path('show',{'id':livres.id})}}">{{livres.titre}}</a> </p>
+            {% endfor %}
+        </div>
+    {% endblock %}
+
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block body %}
+        {% block content %}
+                <div class="container">
+                    <ul>
+                        {% for genres in genre %}
+                            <li><a href="{{path('description',{'id':genres.id})}}">{{genres.nom}}</a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+        {% endblock %}
+{% endblock %}
