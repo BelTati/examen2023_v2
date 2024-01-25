@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello GenreController!{% endblock %}
+
+{% block body %}
+    {% block content %}
+        <div class="container">
+            <p>{{genre.nom}}</p>
+            <p>{{genre.description}}</p>
+
+            <h4> Listes des livres </h4>
+            {% for livre in livres %}
+                <p>{{livre.titre}}</p>
+            {% endfor %}
+        </div>
+    {% endblock %}
+{% endblock %}

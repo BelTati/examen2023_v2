@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello GenreController!{% endblock %}
+
+{% block body %}
+    {% block content %}
+        <div class="container">
+            <h4> Description de livre </h4>
+            <p>Titre: {{livre.titre}}</p>
+            <p>Résumé: {{livre.resume}}</p>
+            <p>Auteur: {{livre.auteur}}</p>
+            <p>Genre: {{genreNom}}</p>
+            <p>Vote: {{livre.votes}}</p>
+            <p>Date de parution: {{ livre.dateParution|date("m/d/Y") }}</p>
+
+        </div>
+    {% endblock %}
+{% endblock %}
