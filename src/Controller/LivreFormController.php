@@ -37,7 +37,7 @@ class LivreFormController extends AbstractController
             //dd($livre);
 
             $entityManager->persist($livre);
-            //$entityManager->flush();
+            $entityManager->flush();
 
 
         }
